@@ -6,11 +6,14 @@ const JoinedEvents = () => {
   const [events, setEvents] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:3000/joined?email=${user.email}`, {
-      headers: {
-        authorization: `Bearer ${user.accessToken}`,
-      },
-    })
+    fetch(
+      `https://social-event-server-peach.vercel.app/joined?email=${user.email}`,
+      {
+        headers: {
+          authorization: `Bearer ${user.accessToken}`,
+        },
+      }
+    )
       .then((res) => res.json())
       .then((data) => setEvents(data));
   }, [user?.email]);

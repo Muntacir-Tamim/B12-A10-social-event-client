@@ -22,7 +22,7 @@ const CreateEvent = () => {
       creatorEmail: user?.email,
     };
 
-    fetch("http://localhost:3000/events", {
+    fetch("https://social-event-server-peach.vercel.app/events", {
       method: "POST",
       headers: {
         authorization: `Bearer ${user.accessToken}`,

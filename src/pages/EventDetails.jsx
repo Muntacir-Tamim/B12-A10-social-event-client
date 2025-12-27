@@ -10,7 +10,7 @@
 //   const navigate = useNavigate();
 
 //   useEffect(() => {
-//     fetch(`http://localhost:3000/events/${id}`)
+//     fetch(`https://social-event-server-peach.vercel.app/events/${id}`)
 //       .then((res) => res.json())
 //       .then((data) => setEvent(data));
 //   }, [id]);
@@ -21,7 +21,7 @@
 //       return;
 //     }
 
-//     fetch("http://localhost:3000/join", {
+//     fetch("https://social-event-server-peach.vercel.app/join", {
 //       method: "POST",
 //       headers: {
 //         "content-type": "application/json",
@@ -108,7 +108,7 @@ const EventDetails = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch(`http://localhost:3000/events/${id}`)
+    fetch(`https://social-event-server-peach.vercel.app/events/${id}`)
       .then((res) => res.json())
       .then((data) => setEvent(data));
   }, [id]);
@@ -119,7 +119,7 @@ const EventDetails = () => {
       return;
     }
 
-    fetch("http://localhost:3000/join", {
+    fetch("https://social-event-server-peach.vercel.app/join", {
       method: "POST",
       headers: {
         "content-type": "application/json",

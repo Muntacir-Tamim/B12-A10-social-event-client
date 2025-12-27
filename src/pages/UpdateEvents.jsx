@@ -12,7 +12,7 @@ const UpdateEvents = () => {
   const [date, setDate] = useState(new Date());
 
   useEffect(() => {
-    fetch(`http://localhost:3000/event/${id}`, {
+    fetch(`https://social-event-server-peach.vercel.app/event/${id}`, {
       headers: {
         authorization: `Bearer ${user.accessToken}`,
       },
@@ -39,7 +39,7 @@ const UpdateEvents = () => {
       creatorEmail: user?.email,
     };
 
-    fetch(`http://localhost:3000/update-event/${id}`, {
+    fetch(`https://social-event-server-peach.vercel.app/update-event/${id}`, {
       method: "PUT",
       headers: {
         authorization: `Bearer ${user.accessToken}`,
